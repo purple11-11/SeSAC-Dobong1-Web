@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form 구성 태그❤</title>
+  </head>
+  <body>
+    <form>
+      <label> id : <input type="text" placeholder="id를 입력해주세요." /> </label>
+      <br />
+      <label for="pw"> password : </label>
+      <input type="password" id="pw" /> <br />
+      email : <input type="100" value="allie" />
+      <input type="button" value="로그인" />
+      <!-- 새로고침 안됨-->
+      <input type="submit" value="로그인" />
+      <button><span style="color: red">로</span>그인</button>
+      <button><span style="color: red">로</span>그인</button>
+
+      <input type="color" />
+      <input type="file" />
+      <input type="number" />
+      <input type="date" />
+      <input type="range" />
+      <!-- 입력값 여러줄 쓰고싶을 때 <textarea> -->
+      <textarea cols="30" rows="10"></textarea>
+
+      <hr />
+      <!-- [암시적 작성법] label + input (for, id 연결안해도 됨 - 간편) -->
+      <h5>다음중 input의 type이 아닌 것은? (모두 고르시오)</h5>
+      <label> <input type="checkbox" name="" id="" /> alt </label>
+      <label> <input type="checkbox" name="" id="" /> text </label>
+
+      <label> <input type="checkbox" name="" id="" /> img </label>
+
+      <label> <input type="checkbox" name="" id="" /> click </label>
+
+      <label> <input type="checkbox" name="" id="" /> date </label>
+
+      <!-- [명시적 작성법] input태그와 label태그 연결 (for, id 속성으로 연결해줌 - 안정적) -->
+      <h5>다음 중 img 태그의 속성인 것은?</h5>
+
+      <input type="radio" name="img" id="alt" checked />
+      <label for="alt">alt</label>
+
+      <input type="radio" name="img" id="bread" />
+      <label for="bread">bread</label>
+
+      <input type="radio" name="img" id="href" />
+      <label for="href">href</label>
+
+      <input type="radio" name="img" id="mouse" />
+      <label for="mouse">mouse</label>
+
+      <input type="radio" name="img" id="dragon" disabled />
+      <label for="dragon">dragon</label>
+
+      <br />
+
+      <select>
+        <optgroup label="빨간꽃">
+          <option value="장미" disabled>장미</option>
+          <option value="동백꽃">동백꽃</option>
+          <option value="튤립">튤립</option>
+        </optgroup>
+        <optgroup label="하얀꽃">
+          <option value="벚꽃">벚꽃</option>
+          <option value="매화">매화</option>
+        </optgroup>
+      </select>
+    </form>
+  </body>
+</html>
