@@ -1,0 +1,13 @@
+.box {
+  background-color: orange;
+  width: auto;
+  height: 200px;
+}
+
+.d-block {
+  display: block;
+  width: 200px;
+  height: 100px;
+  margin-right: 30px;
+  border: 1px solid black;
+}

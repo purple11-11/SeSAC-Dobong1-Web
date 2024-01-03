@@ -1,0 +1,81 @@
+.d-block {
+  display: block;
+  background-color: aquamarine;
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  padding: 15px;
+  margin: 20px; /* 위, 아래 상쇄됨*/
+}
+
+.d-inline {
+  display: inline;
+  background-color: pink;
+  /* width, height 적용 안됨*/
+  width: 100px;
+  height: 100px;
+  /* inline 속성에서 padding은 사용하지 않는 것을 권장 */
+  /* TODO: 이유 알아보기 */
+  /* padding: 15px;
+  margin: 20px; */
+}
+
+.d-inline-block {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: yellowgreen;
+  border: 1px solid blue;
+  padding: 15px;
+  margin: 20px; /* margin 상쇄되지 않고, 더 해짐*/
+}
+
+.parent {
+  width: 400px;
+  /* 
+  width 를 300px로 바꾸면 .min은 400px 유지, .max는 같이 줄어듦
+  width 를 500px로 바꾸면 .max는 400px 유지, .min은 같이 늘어남
+  */
+  height: 200px;
+  background-color: red;
+}
+
+.parent > .min {
+  min-width: 400px;
+  height: 100px;
+  background-color: orange;
+}
+
+.parent > .max {
+  max-width: 400px;
+  height: 100px;
+  background-color: rebeccapurple;
+}
+
+.box {
+  background-color: beige;
+  border: 1px solid black;
+}
+
+.box-px {
+  width: 50px;
+  height: 50px;
+}
+
+.box-view {
+  width: 50vw;
+  height: 50vh;
+}
+
+.box-per {
+  width: 50%;
+  /* height: 50%; 현재 부모가 body인데, body는 기본 높이가 0이라 적용 안됨 */
+}
+
+.rem {
+  font-size: 2rem;
+}
+
+.em {
+  font-size: 2em;
+}

@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Single+Day&display=swap");
+
+@font-face {
+  font-family: "OG_Renaissance_Secret-Rg";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/OG_Renaissance_Secret-Rg.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-link {
+  font-family: "Diphylleia", serif;
+}
+
+.font-import {
+  font-family: "Single Day", cursive;
+}
+
+.noonnu {
+  font-family: "OG_Renaissance_Secret-Rg", serif;
+}
+
+.sentences {
+  font-weight: 700;
+  font-size: 16px;
+  /* font-size: 1rem; */
+  /* font-size: 1em; */
+
+  /* text-align */
+  text-align: left;
+  text-align: right;
+  text-align: center;
+
+  /* text-decoration */
+  text-decoration: line-through;
+  text-decoration: underline;
+  text-decoration: overline;
+  text-decoration: none;
+
+  /* line-height */
+  line-height: 32px; /* 보통 세로의 가운데 정렬 할 때 많이 사용함*/
+}
+
+a {
+  text-decoration: none;
+  /* color: black; */
+
+  /* 색깔 지정 방법 */
+  /* 1. 색깔 이름 작성 : red, black, pink, ... 
+     2. rgb(-, -, -) 각 자리에는 0~255까지의 숫자가 올 수 있음
+     3. #nnnnnn (16진수로 구성) ex) #c358ab
+  */
+  color: rgb(0, 0, 0);
+  color: #000000;
+}

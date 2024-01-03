@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상 클래스 선택자1 실습</title>
+    <style>
+      /* 실습3. 가상 클래스 선택자 1 */
+      h1:hover {
+        color: red;
+      }
+
+      a:active {
+        background-color: blue;
+      }
+
+      input:focus {
+        background-color: orange;
+      }
+
+      /* 실습4. 줄무늬 모양 만들기 */
+      .stripes div:first-child {
+        background-color: navy;
+        color: white;
+      }
+
+      .stripes div:last-child {
+        background-color: navy;
+        color: white;
+      }
+
+      .stripes *:nth-child(4n + 2) {
+        background-color: yellow;
+      }
+
+      .stripes *:not(4n + 2) {
+        background-color: navy;
+        color: white;
+      }
+
+      /* 실습5. 가상 요소 선택자 */
+      .box::before {
+        content: "택시 ";
+      }
+      .box::after {
+        content: " 빨리";
+      }
+
+      /* 실습6. 속성 선택자 */
+      [disabled] {
+        background-color: red;
+      }
+
+      [placeholder="이름"] {
+        background-color: orange;
+      }
+
+      input *:not([placeholder]) {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>제목</h1>
+    <a href="https://www.naver.com">Naver</a>
+    <br />
+    <input type="text" />
+
+    <hr />
+
+    <div class="stripes">
+      <div>navy</div>
+      <div>yellow</div>
+      <div>navy</div>
+      <div>navy</div>
+      <div>navy</div>
+      <div>yellow</div>
+      <div>navy</div>
+      <div>navy</div>
+      <div>navy</div>
+      <div>yellow</div>
+      <div>navy</div>
+    </div>
+
+    <hr />
+
+    <div class="box">여기요!</div>
+
+    <hr />
+
+    <input
+      type="text"
+      placeholder="
+이름"
+    />
+    <input type="password" value="pw" />
+    <input
+      type="text"
+      value="000
+0000 0000"
+    />
+    <input
+      type="text"
+      placeholder="
+핸드폰"
+    />
+    <input
+      type="text"
+      placeholder="
+주민번호"
+      disabled
+    />
+  </body>
+</html>

@@ -1,0 +1,5 @@
+@import url(./practice_import.css);
+p {
+  background-color: red;
+  color: white;
+}
