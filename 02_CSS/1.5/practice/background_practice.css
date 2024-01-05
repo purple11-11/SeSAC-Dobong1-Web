@@ -1,0 +1,23 @@
+.circle {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+}
+
+.background {
+  display: flex;
+  position: relative;
+  background: linear-gradient(45deg, orange, #e714ba);
+}
+
+.background-image {
+  display: flex;
+  position: absolute;
+  width: 465px;
+  height: 465px;
+  background-image: url("https://i.namu.wiki/i/yHMdZs8LhKDP0D0XmvNkWe4NplRU5BDyXiZNDk5BTOd9ON5KtykFiDO_Q7SDpQLA-q9Q4fyFKfzM3apcZnPGtg.webp");
+  background-size: cover;
+  border: 7px solid white;
+  top: 10px;
+  left: 10px;
+}
