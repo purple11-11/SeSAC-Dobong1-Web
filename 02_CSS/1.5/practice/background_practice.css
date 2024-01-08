@@ -5,7 +5,6 @@
 }
 
 .background {
-  display: flex;
   position: relative;
   background: linear-gradient(45deg, orange, #e714ba);
 }
@@ -17,6 +16,8 @@
   height: 465px;
   background-image: url("https://i.namu.wiki/i/yHMdZs8LhKDP0D0XmvNkWe4NplRU5BDyXiZNDk5BTOd9ON5KtykFiDO_Q7SDpQLA-q9Q4fyFKfzM3apcZnPGtg.webp");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   border: 7px solid white;
   top: 10px;
   left: 10px;

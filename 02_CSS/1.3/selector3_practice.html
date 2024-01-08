@@ -19,7 +19,8 @@
       }
 
       /* 실습4. 줄무늬 모양 만들기 */
-      .stripes div:first-child {
+      /* 내가 처음 썼던 코드(중간에 div(navy)들 색채우기 실패!) */
+      /* .stripes div:first-child {
         background-color: navy;
         color: white;
       }
@@ -36,6 +37,16 @@
       .stripes *:not(4n + 2) {
         background-color: navy;
         color: white;
+      } */
+
+      .stripes * {
+        background-color: navy;
+        color: white;
+      }
+
+      .stripes *:nth-child(4n + 2) {
+        background-color: yellow;
+        color: black;
       }
 
       /* 실습5. 가상 요소 선택자 */
@@ -51,11 +62,11 @@
         background-color: red;
       }
 
-      [placeholder="이름"] {
+      [placeholder="이름"]:focus {
         background-color: orange;
       }
 
-      input *:not([placeholder]) {
+      input:not([placeholder]) {
         background-color: blue;
       }
     </style>
@@ -88,27 +99,10 @@
 
     <hr />
 
-    <input
-      type="text"
-      placeholder="
-이름"
-    />
+    <input type="text" placeholder="이름" />
     <input type="password" value="pw" />
-    <input
-      type="text"
-      value="000
-0000 0000"
-    />
-    <input
-      type="text"
-      placeholder="
-핸드폰"
-    />
-    <input
-      type="text"
-      placeholder="
-주민번호"
-      disabled
-    />
+    <input type="text" value="000-0000-0000" />
+    <input type="text" placeholder="핸드폰" />
+    <input type="text" placeholder="주민번호" disabled />
   </body>
 </html>

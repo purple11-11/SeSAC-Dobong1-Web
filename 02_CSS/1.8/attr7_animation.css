@@ -108,51 +108,51 @@
   }
 }
 
-.container {
-  width: 600px;
-  height: 300px;
-  border: 1px solid black;
-}
 .ball {
+  position: relative;
   width: 100px;
   height: 100px;
-  background: linear-gradient(yellow, rgb(255, 81, 0));
   border-radius: 50%;
-  animation: round 6s infinite;
+  background: linear-gradient(45deg, yellow, rgb(250, 37, 0));
+  animation: roundWall 7s linear infinite;
 }
 
-@keyframes round {
+@keyframes roundWall {
   0%,
   100% {
     transform: translate(0, 0);
   }
   25% {
-    transform: translate(500px, 0);
+    transform: translate(calc(100vw - 110px), 0);
   }
   50% {
-    transform: translate(500px, 200px);
+    transform: translate(calc(100vw - 110px), calc(100vh - 175px));
   }
   75% {
-    transform: translate(0, 200px);
+    transform: translate(0, calc(100vh - 175px));
   }
-}
-
-.container2 {
-  width: 950px;
-  height: 100px;
-  border: 1px solid black;
 }
 
 .text {
-  animation: sliding 2s reverse;
+  animation: sliding 2s linear;
 }
 
 @keyframes sliding {
-  from {
-    transform: translate(0, 0);
+  0% {
+    /* margin-left: 100%; */
+    transform: translate(100vh, 0);
+    width: 150%;
   }
 
-  to {
-    transform: translate(950px, 0);
+  50% {
+    /* margin-left: 50%; */
+    transform: translate(50vh, 0);
+    width: 150%;
+  }
+
+  100% {
+    /* margin-left: 0%; */
+    transform: translate(0, 0);
+    width: 100%;
   }
 }

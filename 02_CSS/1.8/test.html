@@ -3,18 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./attr7_animation.css" />
+    <title>animation 실습</title>
+    <style>
+      .text {
+        animation: sliding 2s linear;
+      }
+
+      @keyframes sliding {
+        0% {
+          margin-left: 100%;
+          width: 150%;
+        }
+
+        50% {
+          margin-left: 50%;
+          width: 150%;
+        }
+
+        100% {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!-- <div>
-      <div class="box ball1"></div>
-      <div class="box ball2"></div>
-    </div> -->
-
-    <h2>animation 실습</h2>
-    <div class="ball"></div>
-
     <div class="text">
       "As I relax on the sofa and gaze around a room a thought hits me: this is exactly the place
       I've been looking for all my life. A little hideaway in some sinkhole somewhere. I'd always
