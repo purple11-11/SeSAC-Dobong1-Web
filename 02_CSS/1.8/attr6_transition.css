@@ -1,0 +1,62 @@
+.box {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  background-color: black;
+}
+
+.box1:hover {
+  background-color: pink;
+  height: 120px;
+  width: 120px;
+
+  transition-duration: 1s;
+  transition-delay: 1s;
+  /* transition-property: height; height에 대해서만 duration, delay 적용 */
+  transition-timing-function: linear; /*시간 관련 함수: 일정한 간격의 시간으로 동작함*/
+}
+
+.box2:hover {
+  /* transition 단축 속성 */
+  /* transition: property duration(필수) timing-function delay */
+  background-color: aqua;
+  transform: translateX(100px) scaleX(2);
+  /* transition: transform 0.5s linear 2s; */
+  transition: 2s; /*duration만 지정해도 transition 적용 가능!*/
+}
+
+.box3:hover {
+  transition: 6s;
+  /* opacity: 0; 서서히 사라짐 */
+  /* visibility: hidden; */
+  display: none;
+}
+
+/* transition 실습 */
+.items {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  background-color: blue;
+  border: 1px solid black;
+}
+
+.item1:hover {
+  width: 200px;
+  transition: 1s;
+}
+.item2:hover {
+  transform: translateX(50px) skewX(-45deg);
+  transition: 1s;
+}
+.item3:hover {
+  background-color: red;
+  border-radius: 50px;
+  transform: translateX(300px) rotate(180deg);
+  transition: 1.5s;
+}
+.item4:hover {
+  background-color: yellow;
+  transform: translateY(25px) scale(1.5) rotateY(360deg);
+  transition: 2s;
+}
