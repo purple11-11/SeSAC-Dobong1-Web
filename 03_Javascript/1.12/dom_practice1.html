@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 실습 - 요소 선택 및 다루기</title>
+  </head>
+  <body>
+    <!-- 실습 1. HTML 내용 변경하기 -->
+    <div>민트 초코는 <span>맛있다 >_<</span></div>
+
+    <script>
+      // 요소 선택
+      let span = document.querySelector("span");
+
+      /* 효과 적용 */
+      // 방법 1.
+      // span.innerHTML = "<strong>맛없다 ㅡㅡ;;</strong>";
+      // span.setAttribute("style", "color: red");
+
+      // 방법 2.
+      span.textContent = "맛없다 ㅡㅡ;;";
+      span.style.color = "red";
+      span.style.fontWeight = "700";
+      // span.style = "font-weight: 700"; // color: red 적용 사라짐
+      // style 이라는 하나의 속성에 color, font-weight 등 존재
+      // style만 사용하고 싶으면 sapn.style = "color: red; font-weight: 700;" 로 작성해주기!
+    </script>
+  </body>
+</html>
