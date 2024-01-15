@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <title>jQuery</title>
+    <script>
+      function setValue() {
+        // input 태그의 value 값을 설정
+        $("input").val("setting");
+      }
+
+      function getValue() {
+        // input 태그의 value 값 가져오기
+        alert($("input").val());
+      }
+
+      let isClicked = true;
+      function changeStyle() {
+        if (isClicked === true) {
+          $("span").css("font-size", "28px");
+          isClicked = false;
+        } else {
+          $("span").css("font-size", "16px");
+          isClicked = true;
+        }
+      }
+
+      function changeAttribute() {
+        $("input").attr("placeholder", "name");
+      }
+
+      function changeText() {
+        $("span").text("jQuery~");
+      }
+
+      function changeHTML() {
+        $("p").html("<h1>jQuery</h1>");
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" />
+    <button onclick="setValue()">setValue</button>
+    <button onclick="getValue()">getValue</button>
+    <br />
+    <span>안녕</span>
+    <button onclick="changeStyle()">changeStyle</button>
+    <button onclick="changeAttribute()">changeAttribute</button>
+
+    <p>p태그</p>
+    <button onclick="changeText()">changeText</button>
+    <button onclick="changeHTML()">cHTMLibute</button>
+  </body>
+</html>

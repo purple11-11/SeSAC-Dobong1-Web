@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery 실습1</title>
+    <!-- jQuery CDN 불러오기 -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function changeImg(name) {
+        // name: apple or banana or grape or peach
+        switch (name) {
+          case "apple":
+            $("img").attr(
+              "src",
+              "https://www.collinsdictionary.com/images/full/apple_158989157.jpg"
+            );
+            break;
+          case "banana":
+            $("img").attr(
+              "src",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banana-Single.jpg/1200px-Banana-Single.jpg"
+            );
+            break;
+          case "grape":
+            $("img").attr(
+              "src",
+              "https://img.imageboss.me/fourwinds/width/425/dpr:2/shop/products/blackmonukka.jpg?v=1538780984"
+            );
+            break;
+          case "peach":
+            $("img").attr(
+              "src",
+              "https://fruitique.in/cdn/shop/products/spanish_peach_1500x1500_cac7f60f-1c03-4cfa-a708-876dc6b13c74_750x810.jpg?v=1632917110"
+            );
+            break;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- 필요하다면 이미지 경로 변경 -->
+    <img src="./../../1.12/img/icecream1.png" alt="과일" width="230px" height="200px" />
+    <br />
+    <button onclick="changeImg('apple')">사과</button>
+    <button onclick="changeImg('banana')">바나나</button>
+    <button onclick="changeImg('grape')">포도</button>
+    <button onclick="changeImg('peach')">복숭아</button>
+  </body>
+</html>
