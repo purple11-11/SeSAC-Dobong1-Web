@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <title>실습3 - 스케줄(1)</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      article:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1 {
+        color: #339930;
+      }
+
+      table {
+        display: flex;
+      }
+
+      th {
+        margin-bottom: 20px;
+      }
+
+      .sun {
+        color: red;
+      }
+
+      .sat {
+        color: blue;
+      }
+
+      tr {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        margin: 10px;
+        padding: 0;
+      }
+
+      .lastTr {
+        display: flex;
+        justify-content: start;
+      }
+
+      tr > td:nth-child(1) {
+        color: red;
+      }
+      tr > td:nth-child(7) {
+        color: blue;
+      }
+
+      td {
+        margin: 5px;
+        padding: 0;
+        width: 60px;
+        height: 60px;
+      }
+      td:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <article>
+        <div class="date">
+          <label for="date">날짜 : </label>
+          <input id="date" type="text" alt="date" name="date" />
+        </div>
+        <div class="content">
+          <label for="content">내용 : </label>
+          <input id="content" type="text" alt="schedule content" name="content" />
+        </div>
+        <button>작성</button>
+      </article>
+
+      <article>
+        <h1>2024년 1월</h1>
+        <table class="cal">
+          <tr>
+            <th class="sun">日</th>
+            <th>月</th>
+            <th>火</th>
+            <th>水</th>
+            <th>木</th>
+            <th>金</th>
+            <th class="sat">土</th>
+          </tr>
+          <tr class="firTr">
+            <td></td>
+            <td style="color: red">1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+          </tr>
+          <tr class="lastTr">
+            <td>28</td>
+            <td>29</td>
+            <td>30</td>
+            <td>31</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </article>
+    </div>
+  </body>
+  <script>
+    // $("td").on("click", function () {
+    //   date = $("#date").val(this.innerText);
+    // });
+
+    // function addSchedule() {
+    //   let date = $("#date").val();
+    //   let content = $("#content").val();
+    //   $('`${(td.innerText = date)}`')
+    //     .appendChild(`<div>${content}</div>`)
+    //     .css("color", "black");
+    // }
+
+    /* ------------------------------------------------ */
+
+    let clickEl = ""; // 클릭한 요소 기억할 전역변수
+
+    $(document).ready(function () {
+      //
+      // 클릭한 요소 날짜 input에 나타내기
+      $("td").click(function () {
+        clickEl = $(this);
+        $("#date").val(clickEl.text());
+      });
+
+      // 버튼 눌렀을 때 이벤트 추가
+      $("button").click(function () {
+        addEvent();
+      });
+
+      // 엔터로 이벤트 추가
+      $("input").keydown(function (e) {
+        if (e.key === "Enter") addEvent();
+      });
+
+      function addEvent() {
+        if (clickEl) {
+          let content = $("#content").val();
+          clickEl.append(`<div>${content}</div>`);
+          clickEl.children("div").css("color", "black");
+          $("input").val(""); // 날짜, 내용 input 창 초기화
+        }
+      }
+    });
+  </script>
+</html>
