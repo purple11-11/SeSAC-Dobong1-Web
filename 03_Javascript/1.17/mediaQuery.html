@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>media query</title>
+
+    <!-- <style>
+      /* 가로가 500px 이상일 때 */
+      @media screen and (min-width: 500px) {
+        body {
+          background-color: skyblue;
+        }
+      }
+
+      /* 가로가 300px 이하일 때 */
+      @media screen and (max-width: 300px) {
+        body {
+          background-color: orange;
+        }
+      }
+
+      /* 세로가 500px 이상일 때 */
+      @media screen and (min-height: 500px) {
+        p {
+          background-color: green;
+        }
+      }
+
+      @media screen and (max-height: 300px) {
+        p {
+          font-family: Georgia, "Times New Roman", Times, serif;
+        }
+      }
+    </style> -->
+
+    <!-- 추가 내용 정리 style -->
+    <style>
+      .more-and-less {
+        width: 100px;
+        height: 100px;
+        border: 5px solid black;
+      }
+
+      /* ~ 부터 ~까지 범위 작성 가능 */
+      /* 비교 연산자 사용 가능 */
+      /* @media (min-width: 300px) and (max-width: 600px) { */
+      @media (300px <= width <= 600px) {
+        .more-and-less {
+          background-color: purple;
+        }
+      }
+      /* ---------------------------- */
+      /* 가로, 세로 모드 */
+      /* 가로 */
+      @media (orientation: landscape) {
+        body {
+          background-color: gold;
+        }
+      }
+      /* 세로 */
+      @media (orientation: portrait) {
+        body {
+          background-color: pink;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>미디어 쿼리 실습</p>
+
+    <!-- 추가 내용 정리 -->
+    <div class="more-and-less">more and less</div>
+  </body>
+</html>
