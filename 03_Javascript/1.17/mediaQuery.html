@@ -72,4 +72,31 @@
     <!-- 추가 내용 정리 -->
     <div class="more-and-less">more and less</div>
   </body>
+  <script>
+    let select = 5;
+
+    for (let i = 1; i <= select; i++) {
+      let sum = "";
+
+      for (let j = 1; j <= i; j++) {
+        sum = sum + "*";
+      }
+
+      for (let k = 1; k <= select * 2 - 1 - 2 * i; k++) {
+        sum = sum + " ";
+      }
+
+      if (i < select) {
+        for (l = 1; l <= i; l++) {
+          sum = sum + "*";
+        }
+      } else {
+        for (l = 1; l < select; l++) {
+          sum = sum + "*";
+        }
+      }
+
+      console.log(sum);
+    }
+  </script>
 </html>
