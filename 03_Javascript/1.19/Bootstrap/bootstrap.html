@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap CDN (CSS, JS) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Bootstrap</title>
+    <style>
+      p {
+        height: 50px;
+        width: 50px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- margin, padding -->
+    <!-- {속성}{추가속성}-{크기} -->
+
+    <!-- 
+        속성
+        marign: m
+        padding: p
+
+        추가 속성
+        top: t ex.maring-top: mt
+        bottom: b
+        left: s(start) ex. margin-left: ms
+        right: e(end)
+        상하(x축): x
+        좌우(y축): y
+
+        크기
+        0 ~ 5, auto, %(생략해서 쓰기) 가능
+     -->
+    <p class="m-3"></p>
+    <p class="m-3"></p>
+    <p class="m-3"></p>
+
+    <!-- 브레이크 포인트 사용 - 반응형 가능 -->
+    <p class="m-1 mb-md-5"></p>
+    <p class="m-1 mb-md-5"></p>
+    <p class="m-1 mb-md-5"></p>
+  </body>
+</html>

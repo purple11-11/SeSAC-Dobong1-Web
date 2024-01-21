@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>전체 실습</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        overflow: scroll;
+      }
+
+      .ph-color::placeholder {
+        color: #f2f4f2ab;
+      }
+
+      section {
+        display: flex;
+        justify-content: center;
+      }
+
+      .background > img {
+        display: inline-block;
+        width: 80vw;
+      }
+
+      .hogwarts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      .wrap {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 80vw;
+        height: 60vh;
+        margin-bottom: 20px;
+      }
+
+      .wrap:nth-child(2n + 1) > div {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 250px;
+      }
+
+      .wrap:nth-child(2n) > div {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 250px;
+      }
+
+      .gryffindor,
+      .slytherin,
+      .ravenclaw,
+      .hufflepuff {
+        display: flex;
+        justify-content: space-between;
+        margin: 80px;
+      }
+
+      /* .slytherin {
+        margin: 80px;
+      }
+
+      .ravenclaw {
+        margin: 80px;
+      }
+
+      .hufflepuff {
+        margin: 80px;
+      } */
+      .gryffindor-logo {
+        width: 300px;
+        height: 300px;
+        background-image: url(./img/gryffindor.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .slytherin-logo {
+        width: 350px;
+        height: 350px;
+        background-image: url(./img/slytherin.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .ravenclaw-logo {
+        width: 300px;
+        height: 300px;
+        background-image: url(./img/ravenclaw.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .hufflepuff-logo {
+        width: 300px;
+        height: 300px;
+        background-image: url(./img/hufflepuff.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand mx-5" href="#">
+          <img src="./img/HarryPotter-logo.png" width="250px" alt="해리포터 로고" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+                style="color: #f2f4f2; font-weight: bold"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: #f2f4f2; font-weight: bold">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style="color: #f2f4f2; font-weight: bold"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" style="background-color: #f2f4f25e; border-radius: 3px">
+                <li><a class="dropdown-item" href="#" style="color: #f2f4f2">Action</a></li>
+                <li><a class="dropdown-item" href="#" style="color: #f2f4f2">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#" style="color: #f2f4f2">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true" style="color: gray">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="ph-color form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              style="background-color: rgba(128, 128, 128, 0.466); border: 0"
+            />
+            <button class="btn" type="submit" style="background-color: #40596a; color: #f2f4f2">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- main image -->
+    <div class="container">
+      <section>
+        <div class="background">
+          <img src="https://wallpaper.dog/large/17162598.jpg" alt="background-image" />
+        </div>
+      </section>
+      <!-- 기숙사 로고 -->
+      <section>
+        <div class="hogwarts">
+          <!-- 그리핀도르 -->
+          <div class="wrap">
+            <div class="gryffindor" data-aos="fade-up" data-aos-duration="3000">
+              <div class="gryffindor-logo"></div>
+              <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2013/09/12/17/potter.jpg"
+                      class="d-block"
+                      width="500px"
+                      height=""
+                      alt="해리포터 사진"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="https://pbs.twimg.com/media/C9W9sG0UQAADidu.jpg"
+                      class="d-block"
+                      width="300px"
+                      alt="론 위즐리 사진"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="https://i.namu.wiki/i/udbu9A9tArIY77mYJKKDJVCGtwSl9bbjACg99-l89eBUTvnhCsL8lxpeJI-ptmbwzp37mZ0i3rHUEPExmTnVHA.webp"
+                      class="d-block"
+                      width="300px"
+                      alt="헤르미온느 사진"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 슬리데린 -->
+            <div class="slytherin" data-aos="fade-up" data-aos-duration="3000">
+              <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="https://i.namu.wiki/i/TdU4a5zGJtSBhU-zQ8AHt2k_OYpHYeQ6bNkSGA5utmL8b0t8Jbdk4JGJ6c_9Jf1UFMom8-tMA01Eb77E6dXEOA.webp"
+                      class="d-block"
+                      width="500px"
+                      alt="말포이 사진"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="https://i.namu.wiki/i/rg277qMLJFNCpB4OdTi5lb0IQrHTBNym1fAVe38c4pGYGYF1mfyyU0eo3IYzUNyIF8q80oVLUl_WZqQWVAvGQQ.webp"
+                      class="d-block"
+                      width="500px"
+                      alt="말포이 아빠 사진"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="https://i.namu.wiki/i/ai_4S3DsiDvcWHtlhPsXnPR0RuDcsnpCrlLqOPFLnLINwiTx9eXCmBtG-3ghYNmh3-KrYpFWEa5m3kSRkazeow.webp"
+                      class="d-block"
+                      width="500px"
+                      alt="스네이프 사진"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <div class="slytherin-logo"></div>
+            </div>
+
+            <!-- 래번클로 -->
+            <div class="ravenclaw" data-aos="fade-up" data-aos-duration="3000">
+              <div class="ravenclaw-logo"></div>
+              <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="https://i.namu.wiki/i/MROJTzx_vKYuAX2c2Y0Tn9IdYIir_vQDGEsgOqqjgiG4qFHASXCDT1Tt5e1kVUGnRk8SIxJLjLqEHl7meTHk3Q.webp"
+                      class="d-block"
+                      width="300px"
+                      alt="루나 러브 굿 사진"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="https://extmovie.com/files/attach/images/135/428/539/029/a85d0606635034fb38960800d2f94eff.jpg"
+                      class="d-block"
+                      width="300px"
+                      alt="초 챙 사진"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="https://rereco.co/wp-content/uploads/2019/12/2-%E2%93%92.-Looper.jpg"
+                      class="d-block"
+                      width="500px"
+                      alt="머틀 사진"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 후플푸프 -->
+            <div class="hufflepuff" data-aos="fade-up" data-aos-duration="3000">
+              <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbcKvBF%2FbtqYLy6VxMf%2FtAUsMl1fqSeyBzwyvjuRC1%2Fimg.png"
+                      class="d-block"
+                      width="300px"
+                      alt="세드릭 디고리 사진"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="https://i.namu.wiki/i/ZvQbI6f_-uhF-EZmW63cp9RBDHRvlCL9KN1hyymOxXEx76COCNA6BBpENlkuAxfsYJ406w7kqEKrUhW7UfN1rg.webp"
+                      class="d-block"
+                      width="300px"
+                      alt="뉴트 스캐맨더 사진"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="https://i.namu.wiki/i/v88lK5nRYvNRKsL339K4fe1z65nMdtl-aQq8DqECeauQgOM0htU0WwvQTpdSLZplD1sYrugmAi52RsW5twQE_Q.webp"
+                      class="d-block"
+                      width="300px"
+                      alt="님파도라 통스 사진"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <div class="hufflepuff-logo"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer></footer>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
