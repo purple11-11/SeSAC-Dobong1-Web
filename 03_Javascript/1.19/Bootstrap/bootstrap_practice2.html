@@ -57,20 +57,22 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        width: 80vw;
-        height: 60vh;
         margin-bottom: 20px;
       }
 
       .wrap:nth-child(2n + 1) > div {
         display: flex;
         justify-content: flex-start;
+        align-items: center;
         margin-left: 250px;
+        .
       }
 
       .wrap:nth-child(2n) > div {
         display: flex;
         justify-content: flex-end;
+        align-items: center;
+
         margin-right: 250px;
       }
 
@@ -80,6 +82,7 @@
       .hufflepuff {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin: 80px;
       }
 
@@ -126,6 +129,20 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+      }
+
+      #gryffindor {
+        display: flex;
+        flex-direction: column;
+      }
+
+      footer {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        color: white;
       }
     </style>
   </head>
@@ -204,7 +221,7 @@
     <div class="container">
       <section>
         <div class="background">
-          <img src="https://wallpaper.dog/large/17162598.jpg" alt="background-image" />
+          <img src="./img/hogwarts.jpg" alt="background-image" />
         </div>
       </section>
       <!-- 기숙사 로고 -->
@@ -214,11 +231,11 @@
           <div class="wrap">
             <div class="gryffindor" data-aos="fade-up" data-aos-duration="3000">
               <div class="gryffindor-logo"></div>
-              <div id="carouselExampleIndicators" class="carousel slide">
+              <div id="gryffindor" class="carousel slide">
                 <div class="carousel-indicators">
                   <button
                     type="button"
-                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-target="#gryffindor"
                     data-bs-slide-to="0"
                     class="active"
                     aria-current="true"
@@ -226,13 +243,13 @@
                   ></button>
                   <button
                     type="button"
-                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-target="#gryffindor"
                     data-bs-slide-to="1"
                     aria-label="Slide 2"
                   ></button>
                   <button
                     type="button"
-                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-target="#gryffindor"
                     data-bs-slide-to="2"
                     aria-label="Slide 3"
                   ></button>
@@ -267,7 +284,7 @@
                 <button
                   class="carousel-control-prev"
                   type="button"
-                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-target="#gryffindor"
                   data-bs-slide="prev"
                 >
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -276,7 +293,7 @@
                 <button
                   class="carousel-control-next"
                   type="button"
-                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-target="#gryffindor"
                   data-bs-slide="next"
                 >
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -287,11 +304,11 @@
 
             <!-- 슬리데린 -->
             <div class="slytherin" data-aos="fade-up" data-aos-duration="3000">
-              <div id="carouselExampleIndicators" class="carousel slide">
+              <div id="slytherin" class="carousel slide">
                 <div class="carousel-indicators">
                   <button
                     type="button"
-                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-target="#slytherin"
                     data-bs-slide-to="0"
                     class="active"
                     aria-current="true"
@@ -299,13 +316,13 @@
                   ></button>
                   <button
                     type="button"
-                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-target="#slytherin"
                     data-bs-slide-to="1"
                     aria-label="Slide 2"
                   ></button>
                   <button
                     type="button"
-                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-target="#slytherin"
                     data-bs-slide-to="2"
                     aria-label="Slide 3"
                   ></button>
@@ -339,7 +356,7 @@
                 <button
                   class="carousel-control-prev"
                   type="button"
-                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-target="#slytherin"
                   data-bs-slide="prev"
                 >
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -348,7 +365,7 @@
                 <button
                   class="carousel-control-next"
                   type="button"
-                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-target="#slytherin"
                   data-bs-slide="next"
                 >
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -361,11 +378,11 @@
             <!-- 래번클로 -->
             <div class="ravenclaw" data-aos="fade-up" data-aos-duration="3000">
               <div class="ravenclaw-logo"></div>
-              <div id="carouselExampleIndicators" class="carousel slide">
+              <div id="ravenclaw" class="carousel slide">
                 <div class="carousel-indicators">
                   <button
                     type="button"
-                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-target="#ravenclaw"
                     data-bs-slide-to="0"
                     class="active"
                     aria-current="true"
@@ -373,13 +390,13 @@
                   ></button>
                   <button
                     type="button"
-                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-target="#ravenclaw"
                     data-bs-slide-to="1"
                     aria-label="Slide 2"
                   ></button>
                   <button
                     type="button"
-                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-target="#ravenclaw"
                     data-bs-slide-to="2"
                     aria-label="Slide 3"
                   ></button>
@@ -395,7 +412,7 @@
                   </div>
                   <div class="carousel-item">
                     <img
-                      src="https://extmovie.com/files/attach/images/135/428/539/029/a85d0606635034fb38960800d2f94eff.jpg"
+                      src="https://i.namu.wiki/i/_CMIb18WDWPppwfAQebSk8oQc-JbpBpmIVS8xsmpjUZz7XcaQdyJicWJxaKF1-w_T8C3RfmFkCrVH8MrEqJOXA.webp"
                       class="d-block"
                       width="300px"
                       alt="초 챙 사진"
@@ -413,7 +430,7 @@
                 <button
                   class="carousel-control-prev"
                   type="button"
-                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-target="#ravenclaw"
                   data-bs-slide="prev"
                 >
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -422,7 +439,7 @@
                 <button
                   class="carousel-control-next"
                   type="button"
-                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-target="#ravenclaw"
                   data-bs-slide="next"
                 >
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -433,11 +450,11 @@
 
             <!-- 후플푸프 -->
             <div class="hufflepuff" data-aos="fade-up" data-aos-duration="3000">
-              <div id="carouselExampleIndicators" class="carousel slide">
+              <div id="hufflepuff" class="carousel slide">
                 <div class="carousel-indicators">
                   <button
                     type="button"
-                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-target="#hufflepuff"
                     data-bs-slide-to="0"
                     class="active"
                     aria-current="true"
@@ -445,13 +462,13 @@
                   ></button>
                   <button
                     type="button"
-                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-target="#hufflepuff"
                     data-bs-slide-to="1"
                     aria-label="Slide 2"
                   ></button>
                   <button
                     type="button"
-                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-target="#hufflepuff"
                     data-bs-slide-to="2"
                     aria-label="Slide 3"
                   ></button>
@@ -485,7 +502,7 @@
                 <button
                   class="carousel-control-prev"
                   type="button"
-                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-target="#hufflepuff"
                   data-bs-slide="prev"
                 >
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -494,7 +511,7 @@
                 <button
                   class="carousel-control-next"
                   type="button"
-                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-target="#hufflepuff"
                   data-bs-slide="next"
                 >
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -507,7 +524,11 @@
         </div>
       </section>
     </div>
-    <footer></footer>
+    <footer>
+      <div>
+        <p>made by young</p>
+      </div>
+    </footer>
     <script>
       AOS.init();
     </script>
