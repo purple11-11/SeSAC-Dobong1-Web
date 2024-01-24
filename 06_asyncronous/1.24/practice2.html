@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>practice2 - 배경색 변경</title>
+    <style>
+      body {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      /*  배경색 변경 callback을 then ~ catch로  */
+      //
+      //   function changeBg(color) {
+      //     return new Promise((resolve, reject) => {
+      //       setTimeout(() => {
+      //         document.body.style.backgroundColor = `${color}`;
+      //         resolve(color);
+      //       }, 1000);
+      //     });
+      //   }
+
+      //   changeBg("red")
+      //     .then(() => {
+      //       return changeBg("orange");
+      //     })
+      //     .then(() => {
+      //       return changeBg("yellow");
+      //     })
+      //     .then(() => {
+      //       return changeBg("green");
+      //     })
+      //     .then(() => {
+      //       return changeBg("blue");
+      //     })
+      //     .catch((e) => {
+      //       console.log(e);
+      //     });
+
+      /* async/ await으로 */
+      //
+      function changeBg(color) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            document.body.style.backgroundColor = `${color}`;
+            resolve(color);
+          }, 1000);
+        });
+      }
+
+      async function exec() {
+        await changeBg("red");
+        await changeBg("orange");
+        await changeBg("yellow");
+        await changeBg("green");
+        await changeBg("blue");
+      }
+
+      exec();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 두번째 인자로 쓴 {title}이 include(./includes/head) 안으로 전달됨 -->
+    <%- include('./includes/head',{title: 'HOME'})%>
+  </head>
+  <body>
+    <!-- header -->
+    <%- include('./includes/header')%>
+    <h1>안녕하세요 ejs입니다.</h1>
+    <img src="/static/pooh.png" alt="pooh" width="100px" />
+    <!-- app.use()를 이용해 클라이언트와 서버를 이어주는 중간 작업으로 /static 이라는 키워드 사용 -->
+
+    <h3>for문 사용해보기</h3>
+    <h3>ejs language support</h3>
+    <%for(let i = 1; i <= 5; i++) { %>
+    <h1>안녕하세요 ejs입니다.</h1>
+    <img src="/static/pooh<%=i%>.png" alt="pooh<%=i%>" width="100px" />
+    <%}%>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>콜백지옥 경험하기</title>
+    <style>
+      body {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>배경색이 1초에 한 번씩 변경됩니다.</h1>
+    <!-- red, orange, yellow, green, blue, puple -->
+    <script>
+      setTimeout(() => {
+        document.body.style.backgroundColor = "red";
+        setTimeout(() => {
+          document.body.style.backgroundColor = "orange";
+          setTimeout(() => {
+            document.body.style.backgroundColor = "yellow";
+            setTimeout(() => {
+              document.body.style.backgroundColor = "green";
+              setTimeout(() => {
+                document.body.style.backgroundColor = "blue";
+                setTimeout(() => {
+                  document.body.style.backgroundColor = "purple";
+                }, 1000);
+              }, 1000);
+            }, 1000);
+          }, 1000);
+        }, 1000);
+      }, 1000);
+    </script>
+  </body>
+</html>
