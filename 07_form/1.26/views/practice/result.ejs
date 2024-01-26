@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Result</title>
+  </head>
+  <body>
+    <h1><%= title%>요청 확인하기 실습</h1>
+    <div>
+      <span><%= userInfo.name%>님 환영합니다!</span>
+    </div>
+    <div>
+      <ul>
+        <li>성별 : <%= userInfo.gender%></li>
+        <li>생년월일 : <%= userInfo.yy%>년 <%= userInfo.mm%>월 <%= userInfo.dd%>일</li>
+        <li>관심사 : <%= userInfo.interest%></li>
+      </ul>
+
+      <%if(addInfo){%>
+      <h4>다른 태그 작성해보기</h4>
+      <li>좋아하는 색 : <span class="color"><%= userInfo.likeColor%></span></li>
+      <li>좋아하는 숫자 : <%= userInfo.likeNumber%></li>
+      <%}%>
+      <a href="/">Home으로 이동하기</a>
+    </div>
+
+    <script>
+      // userInfo.color로 받아온 값으로 CSS 적용하기 (DOMContentLoaded)
+      document.addEventListener("DOMContentLoaded", () => {
+        const color = document.querySelector(".color");
+        color.style.color = "<%=userInfo.likeColor%>";
+      });
+    </script>
+  </body>
+</html>

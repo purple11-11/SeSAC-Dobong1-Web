@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result - form 전송 결과</title>
+    <!-- 
+        {
+    title: "GET",
+    userInfo: req.query, // req.query 도 객체({}) 형태 => { id: , email: , password: }
+  }
+     -->
+  </head>
+  <body>
+    <h1><%= title%>요청 확인하기</h1>
+    <div>
+      <span><%=userInfo.id%>(<%=userInfo.email%>)님 환영합니다!</span>
+    </div>
+    <div>비밀번호는 <span><%=userInfo.password%></span>이군요!</div>
+    <a href="/">Home으로 이동하기</a>
+
+    <!-- 참고 -->
+    <%# ejs 주석처리 방법%>
+  </body>
+</html>
