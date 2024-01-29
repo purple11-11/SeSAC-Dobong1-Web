@@ -52,6 +52,14 @@
 
       <!-- open API 사용 -->
       <a href="/open-api">open API 사용해보기</a>
+
+      <br />
+      <!-- 실습. axios get 회원가입 -->
+      <a href="/register">axios get 회원가입</a>
+
+      <br />
+      <!-- 실습. axios post 로그인 -->
+      <a href="/login">axios post 로그인</a>
     </form>
     <script>
       const resultBox = document.querySelector(".result");
@@ -181,7 +189,7 @@
         try {
           const response = await axios({
             method: "post",
-            url: "axios",
+            url: "/axios",
             data: data,
           });
           console.log(response.data);

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- axios CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>실습 axios get 회원가입</title>
+    <style>
+      .result {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>실습 axios get 회원가입</h2>
+    <form name="register">
+      <label for="name">이름</label>
+      <input type="text" id="name" name="name" />
+
+      <fieldset>
+        <legend>성별</legend>
+        <label><input type="radio" name="gender" value="남자" />남자</label>
+        <label><input type="radio" name="gender" value="여자" />여자</label>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>생년월일</legend>
+        <select name="year" id="year">
+          <option selected>2024</option></select
+        >년
+        <select name="month" id="month">
+          <option selected>1</option></select
+        >월
+        <select name="day" id="day">
+          <option selected>1</option></select
+        >일
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>관심사</legend>
+        <label><input type="checkbox" name="interest" value="여행" />여행</label>
+        <label><input type="checkbox" name="interest" value="패션" />패션</label>
+        <label><input type="checkbox" name="interest" value="음식" />음식</label>
+      </fieldset>
+      <br />
+      <button type="button" onclick="registerMember()">회원가입</button>
+    </form>
+
+    <div class="result"></div>
+    <script>
+      const resultBox = document.querySelector(".result");
+      async function registerMember() {
+        const form = document.forms["register"];
+        const getCheckboxValue = () => {
+          // 선택된 목록 가져오기
+          const query = 'input[name="interest"]:checked';
+          const selectedEls = document.querySelectorAll(query);
+
+          // 선택된 목록에서 value 찾기
+          let result = "";
+          selectedEls.forEach((el) => {
+            result += el.value + " ";
+          });
+
+          return result;
+        };
+        const data = {
+          name: form.name.value,
+          gender: form.gender.value,
+          year: form.year.value,
+          month: form.month.value,
+          day: form.day.value,
+          interest: getCheckboxValue(),
+        };
+
+        if (!form.name.value) {
+          resultBox.textContent = "이름을 입력해주세요.";
+        } else if (!form.gender.value) {
+          resultBox.textContent = "성별을 선택해주세요";
+          // } else if (!form.year.value || !form.month.value || !form.day.value) {
+          //   resultBox.textContent = "생년월일을 선택해주세요";
+        } else if (!form.interest.value) {
+          resultBox.textContent = "관심사를 선택해주세요";
+        } else {
+          try {
+            const response = await axios({
+              method: "GET",
+              url: `/axios`,
+              params: data,
+            });
+            console.log("response.data : ", response.data);
+            const { name, gender, year, month, day, interest } = response.data;
+            resultBox.textContent = `GET axios 요청 완료! ${name}님의 성별은 ${gender}, 생년월일은 ${year}/${month}/${day}, 관심사는 ${interest}입니다.`;
+          } catch (err) {
+            console.log(err);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

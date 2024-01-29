@@ -53,6 +53,28 @@ app.get("/open-api", (req, res) => {
   res.render("api");
 });
 
+// 실습
+app.get("/register", (req, res) => {
+  res.render("register");
+});
+
+app.get("/login", (req, res) => {
+  res.render("login");
+});
+
+app.post("/login", (req, res) => {
+  const id = "yyi9546";
+  const pw = "1234";
+  console.log(req.body);
+  let success = false;
+
+  if (req.body.id === id && req.body.pw === pw) {
+    success = true;
+  }
+
+  res.send(success);
+});
+
 app.listen(PORT, () => {
   console.log(`http://localhost:${PORT}`);
 });
