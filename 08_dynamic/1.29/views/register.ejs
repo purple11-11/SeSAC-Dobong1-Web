@@ -51,8 +51,10 @@
     <div class="result"></div>
     <script>
       const resultBox = document.querySelector(".result");
+      const form = document.forms["register"];
       async function registerMember() {
-        const form = document.forms["register"];
+        // 관심사(체크박스) 새로운 배열로 만들기
+        // 내가 짠 코드
         const getCheckboxValue = () => {
           // 선택된 목록 가져오기
           const query = 'input[name="interest"]:checked';
@@ -66,6 +68,17 @@
 
           return result;
         };
+
+        // 리더님 코드
+        /*
+        const favs = []; // 선택된 옵션 넣을 배열
+        form.interest.forEach((checkBox)=>{
+          if(checkBox.checked) { // 체크박스에 체크 되어있으면
+            favs.push(checkbox.value); // favs 배열에 체크된 값 추가
+          }
+        })
+        */
+
         const data = {
           name: form.name.value,
           gender: form.gender.value,
@@ -75,13 +88,14 @@
           interest: getCheckboxValue(),
         };
 
+        console.log(getCheckboxValue());
         if (!form.name.value) {
           resultBox.textContent = "이름을 입력해주세요.";
         } else if (!form.gender.value) {
           resultBox.textContent = "성별을 선택해주세요";
           // } else if (!form.year.value || !form.month.value || !form.day.value) {
           //   resultBox.textContent = "생년월일을 선택해주세요";
-        } else if (!form.interest.value) {
+        } else if (!getCheckboxValue()) {
           resultBox.textContent = "관심사를 선택해주세요";
         } else {
           try {

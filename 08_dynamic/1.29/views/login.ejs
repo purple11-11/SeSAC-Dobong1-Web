@@ -22,16 +22,16 @@
       <label for="pw">password : </label>
       <input type="password" id="pw" name="pw" />
 
-      <button type="button" onclick="loginBtn()">로그인</button>
+      <button type="button" onclick="clickLogin()">로그인</button>
 
       <div class="result"></div>
     </form>
 
     <script>
       const resultBox = document.querySelector(".result");
+      const form = document.forms["login"];
 
-      async function loginBtn() {
-        const form = document.forms["login"];
+      async function clickLogin() {
         const data = {
           id: form.id.value,
           pw: form.pw.value,
