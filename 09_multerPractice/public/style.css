@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 20px;
+  padding: 50px;
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 0 8px lightgray;
+}
+
+h2 > span {
+  color: rgb(0, 119, 255);
+}
+
+img {
+  box-shadow: 0 0 5px pink;
+  margin-bottom: 20px;
+}
+
+.result > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.result > div > span {
+  display: inline-block;
+  width: 100px; /* 아이디, 비밀번호, 이름, 나이 등의 너비를 조정하고 싶다면 원하는 값으로 설정하세요 */
+}
+
+.result > div > span + span {
+  margin-left: -35%; /* 아이디와 비밀번호 사이의 간격을 조정하기 위해 마진을 추가 */
+}
