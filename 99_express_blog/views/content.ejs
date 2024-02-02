@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <%- include('./include/head')%>
+    <style>
+      h1,
+      div {
+        text-align: center;
+      }
+
+      p {
+        white-space: pre-line;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('./include/header')%>
+
+    <!-- {
+        contentID: 1,
+        title: "글제목1",
+        content: "글 내용1",
+        img: null, // null or path(string)
+      } -->
+
+    <h1><%= title%></h1>
+    <div>
+      <p><%= content%></p>
+      <%if(img){%>
+      <img src="/<%= img%>" alt="<%= contentID%>번 글 이미지" width="200" />
+      <%}%>
+    </div>
+  </body>
+</html>
