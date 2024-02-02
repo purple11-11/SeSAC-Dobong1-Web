@@ -10,7 +10,8 @@
     <div class="container">
       <h2><span><%= name%></span>님 마이페이지</h2>
       <div>
-        <img class="profile" src="<%= imgSrc%>" alt="기본 프로필 이미지" width="200" height="200" />
+        <!-- src에 파일 경로설정 해줄 때, 앞에 꼭! / 쓰기 -->
+        <img class="profile" src="/<%= imgSrc%>" alt="프로필 이미지" width="200" height="200" />
       </div>
       <div class="result">
         <div><span>아이디</span><span><%= id%></span></div>
