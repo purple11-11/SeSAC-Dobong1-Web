@@ -226,11 +226,13 @@ SELECT * FROM user ORDER BY birthday;
 -- 2.
 SELECT * FROM user WHERE gender = "M" ORDER BY name DESC;
 -- 3.
-SELECT id, name FROM user WHERE birthday LIKE '1990%';
+SELECT id, name FROM user WHERE birthday LIKE '199%';
 -- 4.
 SELECT * FROM user WHERE birthday LIKE '_____06%' ORDER BY birthday;
+SELECT * FROM user WHERE birthday LIKE '%-06-%' ORDER BY birthday;
+
 -- 5.
-SELECT * FROM user where gender = "M" AND birthday LIKE '1970%';
+SELECT * FROM user where gender = "M" AND birthday LIKE '197%';
 -- 6.
 SELECT * FROM user ORDER BY age DESC limit 3;
 -- 7.
@@ -241,3 +243,6 @@ SELECT * FROM user WHERE id='hong1234';
 -- 9.
 DELETE FROM user WHERE id='jungkrat';
 SELECT * FROM user;
+
+-- 명령어 우선순위
+-- SELECT >> FROM >> WHERE >> GROUP BY >> HAVING >> ORDER BY >> LIMIT
