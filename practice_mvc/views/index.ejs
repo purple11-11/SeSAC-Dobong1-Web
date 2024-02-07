@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <!-- axios CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <h1>동적폼 로그인 실습 MVC 패턴으로 변경</h1>
+
+    <form name="login">
+      <label for="id">id : </label>
+      <input type="text" id="id" name="id" required />
+
+      <label for="pw">password : </label>
+      <input type="password" id="pw" name="pw" required />
+
+      <button type="button" onclick="loginBtn()">로그인</button>
+
+      <div class="result"></div>
+    </form>
+    <script>
+      const resultBox = document.querySelector(".result");
+
+      async function loginBtn() {
+        const form = document.forms["login"];
+        const data = {
+          id: form.id.value,
+          pw: form.pw.value,
+        };
+
+        if (!form.id.checkValidity()) {
+          resultBox.textContent = "id를 입력해주세요";
+        } else if (!form.pw.checkValidity()) {
+          resultBox.textContent = "password를 입력해주세요";
+        } else {
+          try {
+            const res = await axios({
+              method: "post",
+              url: "/login",
+              data: data,
+            });
+            console.log("res.data: ", res.data);
+
+            if (res.data.isLogin) {
+              resultBox.textContent = "로그인 성공😎";
+              resultBox.style.color = "blue";
+            } else {
+              resultBox.textContent = "로그인 실패😥";
+              resultBox.style.color = "red";
+            }
+          } catch (err) {
+            console.log(err);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
