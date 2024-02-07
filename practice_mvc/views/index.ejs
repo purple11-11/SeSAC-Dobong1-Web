@@ -11,12 +11,13 @@
     <h1>동적폼 로그인 실습 MVC 패턴으로 변경</h1>
 
     <form name="login">
-      <label for="id">id : </label>
+      <label for="id">아이디 &nbsp&nbsp</label>
       <input type="text" id="id" name="id" required />
-
-      <label for="pw">password : </label>
+      <br />
+      <label for="pw">비밀번호</label>
       <input type="password" id="pw" name="pw" required />
-
+      <br />
+      <br />
       <button type="button" onclick="loginBtn()">로그인</button>
 
       <div class="result"></div>
@@ -45,10 +46,10 @@
             console.log("res.data: ", res.data);
 
             if (res.data.isLogin) {
-              resultBox.textContent = "로그인 성공😎";
+              resultBox.textContent = `${res.data.userInfo.id}님 환영합니다.`;
               resultBox.style.color = "blue";
             } else {
-              resultBox.textContent = "로그인 실패😥";
+              resultBox.textContent = "아이디 또는 비밀번호를 잘못 입력했습니다.";
               resultBox.style.color = "red";
             }
           } catch (err) {
