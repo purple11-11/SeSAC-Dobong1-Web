@@ -29,7 +29,7 @@ exports.login = (req, res) => {
   for (let i = 0; i < user.length; i++) {
     if (user[i].indexOf(id + "//") !== -1 && user[i].indexOf("//" + pw + "//") !== -1) {
       res.send({
-        id: user[i].split("//")[2],
+        name: user[i].split("//")[2],
         isLogin: true,
       });
     }
