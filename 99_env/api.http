@@ -1,0 +1,4 @@
+# rest client
+@server=http://localhost:8080
+
+GET {{server}}/
