@@ -71,3 +71,4 @@
 |  2  |     [express 실습](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/99_express_blog)     | 24.02.02 ~ 24.02.03 |
 |  3  |       [MVC 실습](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/11_practice_mvc)       | 24.02.07 ~ 24.02.08 |
 |  4  | [MVC_MySQL 실습](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/12_practice_mysql_mvc) | 24.02.14 ~ 24.02.16 |
+|  5  |     [sequelize 실습](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/13_sequelize)      |      24.02.17       |
