@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <%- include('include/include', { title: '로그인' })%>
+  <body>
+    <h1>로그인</h1>
+    <!-- 
+      [로그인] 버튼을 클릭하면 profile.ejs에서 특정 유저 정보를 보여주어야 하기 때문에 
+      userid 정보를 value에 저장(POST /user/signin 요청의 응답을 받은 후 수행)하여
+      폼(input)이 보이지 않도록 hidden 처리함
+    -->
+    <form name="form_info" action="/user/profile" method="POST">
+      <input type="hidden" name="userid" />
+    </form>
+
+    <form name="form_login">
+      <label for="userid">ID</label>
+      <input id="userid" type="text" name="userid" required /><br />
+      <label for="password">Password</label>
+      <input id="password" type="password" name="pw" required /><br />
+      <button type="button" onclick="login();">Login</button>
+    </form>
+
+    <!-- TODO: href 속성값 설정하기 -->
+    <a href="/user/signup">Register</a>
+    <a href="/user">HOME</a>
+
+    <script>
+      // TODO: [Login] 버튼 클릭시 서버에 로그인 요청하기
+      // POST /user/signin
+      function login() {
+        const form = document.forms["form_login"];
+        const formInfo = document.forms["form_info"];
+
+        // 유효성 체크
+        if (!form.checkValidity()) {
+          // alert("아이디와 비밀번호를 모두 입력해주세요.");
+          form.reportValidity();
+          return;
+        }
+
+        axios({
+          method: "post",
+          url: "/user/signin",
+          data: {
+            userid: form.userid.value,
+            pw: form.pw.value,
+          },
+        }).then((res) => {
+          console.log(res.data);
+          const { data } = res;
+          if (data) {
+            // 로그인 성공
+            // 1. 로그인 성공 alert 띄우기
+            alert("로그인 성공!😎");
+            // 2. <form name="form_login">의 userid를 <input type="hidden">에 전달하기
+            formInfo.userid.value = form.userid.value;
+            // 3. hidden input form 제출
+            formInfo.submit(); // /user/profile로 POST 요청 보내는 중
+          } else {
+            alert("로그인 실패!😥");
+            form.reset(); // input창 초기화
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

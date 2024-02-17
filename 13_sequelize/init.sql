@@ -13,6 +13,7 @@ INSERT INTO visitor(name, comment) VALUES ('홍길동', '홍길동입니다~~');
 INSERT INTO visitor VALUES (null, '둘리', '깐따삐야~~');
 
 SELECT * FROM visitor;
+SELECT * FROM user;
 
 ################### [ DCL ] #####################
 -- USER 생성 방법 1 (생성 후 설정)

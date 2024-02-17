@@ -13,5 +13,6 @@ db.sequelize = sequelize; // db = {sequelize: sequelize}
 db.Sequelize = Sequelize; // db = {sequelize: sequelize, Sequelize: Sequelize}
 
 db.Visitor = require("./Visitor")(sequelize, Sequelize); // models > Visitor.js의 Sequelize, DataTypes 매개변수로 각각 넘겨줌
+db.User = require("./User")(sequelize, Sequelize);
 module.exports = db;
 // 다른 파일에서 쓸 수 있도록, db 라는 변수를 내보내기 하는 중

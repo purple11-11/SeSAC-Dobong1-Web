@@ -14,6 +14,8 @@ app.use(express.json());
 // 라우터 분리
 const indexRouter = require("./routes");
 app.use("/", indexRouter);
+const userRouter = require("./routes/user");
+app.use("/user", userRouter);
 
 app.get("*", (req, res) => {
   res.render("404");
