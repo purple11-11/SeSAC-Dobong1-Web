@@ -4,8 +4,6 @@ const router = express.Router();
 
 const controller = require("../controller/Cuser");
 
-// GET /user
-router.get("/", controller.main);
 // GET /user/signin
 router.get("/signin", controller.get_signin);
 // GET /user/signup

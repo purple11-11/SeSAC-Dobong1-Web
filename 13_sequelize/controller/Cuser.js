@@ -2,12 +2,6 @@
 // const User = require("../model/User");
 const models = require("../models");
 
-/* GET */
-// GET /user
-exports.main = (req, res) => {
-  res.render("userIndex");
-};
-
 // GET /user/signin
 exports.get_signin = (req, res) => {
   res.render("signin");
@@ -48,9 +42,10 @@ exports.post_signin = (req, res) => {
     else res.send(false);
   }); */
   models.User.findOne({
+    // findOne은 객체 하나만 반환함! => result.length 사용할 수 없음 (findAll은 배열 반환)
     where: { userid: req.body.userid, pw: req.body.pw },
   }).then((result) => {
-    console.log("Cuser findOne result: ", result);
+    console.log("Cuser findOne result: ", result); // {} or null
     if (result) res.send(true);
     else res.send(false);
   });
