@@ -1,7 +1,10 @@
 "use strict";
 
 const Sequelize = require("sequelize");
-const config = require(__dirname + "/../config/config.json")["development"]; // json 파일은 .표기법으로 접근 안돼서 대괄호로 config.json > development에 접근!
+// const config = require(__dirname + "/../config/config.json")["development"]; // json 파일은 .표기법으로 접근 안돼서 대괄호로 config.json > development에 접근!
+
+// .env 사용하기 위해 js 파일로 config 설정
+const config = require(__dirname + "/../config/config.js")["development"];
 const db = {};
 
 // 1. Sequelize 클래스를 이용해서 sequelize 인스턴스 생성
