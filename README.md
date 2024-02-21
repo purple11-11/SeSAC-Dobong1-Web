@@ -63,13 +63,16 @@
 |  9  |      MVC_MySQL 연동      |                                      [MVC_MySQL](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/12_mvc_mysql)                                       |                                                                                                                                                    [MVC_MySQL]                                                                                                                                                    |      24.02.14       |
 | 10  |     .env & sequelize     | [.env](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/99_env), [sequelize](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/13_sequelize) | [.env & sequelize](https://velog.io/@purple11_11/SeSAC-X-%EC%BD%94%EB%94%A9%EC%98%A8-%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90-%ED%92%80%EC%8A%A4%ED%83%9D-%EA%B3%BC%EC%A0%95-8%EC%A3%BC%EC%B0%A8-%ED%9A%8C%EA%B3%A0-2-MVCMySQL-%EC%97%B0%EA%B2%B0-%EC%8B%A4%EC%8A%B5-%ED%99%98%EA%B2%BD-%EB%B3%80%EC%88%98-sequelize) |      24.02.16       |
 | 11  | sequelize 심화(Relation) |                               [sequelize 심화](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/14_sequelize_relation)                                |                                                                                                                                            [sequelize 심화(relation)]                                                                                                                                             |      24.02.19       |
+| 12  |        쿠키, 세션        |                                   [쿠키, 세션](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/15_cookie_session)                                    |                                                                                                                                                   [쿠키, 세션]                                                                                                                                                    |      24.02.21       |
 
 ### 실습
 
-| No  |                                              Contents                                              |       Period        |
-| :-: | :------------------------------------------------------------------------------------------------: | :-----------------: |
-|  1  |    [multer 실습](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/09_multerPractice)     | 24.02.01 ~ 24.02.02 |
-|  2  |     [express 실습](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/99_express_blog)     | 24.02.02 ~ 24.02.03 |
-|  3  |       [MVC 실습](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/11_practice_mvc)       | 24.02.07 ~ 24.02.08 |
-|  4  | [MVC_MySQL 실습](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/12_practice_mysql_mvc) | 24.02.14 ~ 24.02.16 |
-|  5  |     [sequelize 실습](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/13_sequelize)      |      24.02.17       |
+| No  |                                                          Contents                                                          |       Period        |
+| :-: | :------------------------------------------------------------------------------------------------------------------------: | :-----------------: |
+|  1  |                [multer 실습](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/09_multerPractice)                 | 24.02.01 ~ 24.02.02 |
+|  2  |                 [express 실습](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/99_express_blog)                 | 24.02.02 ~ 24.02.03 |
+|  3  |                   [MVC 실습](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/11_practice_mvc)                   | 24.02.07 ~ 24.02.08 |
+|  4  |             [MVC_MySQL 실습](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/12_practice_mysql_mvc)             | 24.02.14 ~ 24.02.16 |
+|  5  |                 [sequelize 실습](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/13_sequelize)                  |      24.02.17       |
+|  6  | [Cookie로 "오늘 하루 보지 않기" 기능 구현](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/15_practice_cookie)  |      24.02.21       |
+|  7  | [Session으로 "로그인, 로그아웃" 기능 구현](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/15_practice_session) |      24.02.21       |
