@@ -29,6 +29,43 @@
         console.log("요청 res: ", res.data);
 
         const { result, token, message } = res.data;
+        // result: 로그인 성공 시 true, 실패 시 false
+        // token: 로그인 성공 시 token 정보, 실패 시 undefined
+        // message: 로그인 성공 시 undefined, 실패 시 '로그인 정보가 올바르지 않습니다.'(서버에서 지정한 문자열)
+
+        if (result) {
+          // 로그인 성공!
+          // 프론트(로컬스토리지)에 토큰 저장하는 작업
+          /* 
+            localStorage
+            - 브라우저의 저장소로, 브라우저 내에 영구적으로 { 키: 값 }(객체) 쌍의 데이터 저장
+            - 쿠키와 비슷하게 클라이언트에 저장소가 있음. 문자형 데이터 타입만 저장 가능
+            - 5KB까지 데이터 저장 가능 (쿠키는 4KB)
+
+            1. 로컬 스토리지에 데이터 저장
+            - localStorage.setItem("키이름1", data1); => {키이름1: data1}
+            - localStorage.setItem("키이름2", data2); => {키이름1: data1, 키이름2: data2}
+            - localStorage.setItem("키이름3", data3); => {키이름1: data1, 키이름2: data2, 키이름3: data3}
+
+            2. 로컬 스토리지에서 데이터 가져오기
+            localStorage.getItem("키이름2") >> data2
+
+            3. 로컬 스토리지에서 데이터 1개 삭제
+            - localStorage.removeItem("키이름2"); => {키이름1: data1, 키이름3: data3}
+
+            4. 로컬 스토리지 전체 데이터 삭제
+            - localStorage.clear(); => {}
+           */
+
+          // 토큰 정보 로컬스토리지에 저장
+          localStorage.setItem("login", token);
+          document.location.href = "/";
+        } else {
+          alert(message);
+          // input 창 비우기
+          // document.location.reload();
+          form.reset();
+        }
       }
     </script>
   </body>
