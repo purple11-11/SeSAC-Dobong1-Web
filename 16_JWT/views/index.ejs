@@ -37,6 +37,8 @@
         2. 라이브러리 내의 전역 변수 충돌을 피할 수 있음
           : ex) jQuery랑 같이 사용할 경우 $
        */
+
+      // 자동으로 로그인 된 사람의 정보를 보냄
       (async function () {
         const info = document.querySelector("#info");
         const token = localStorage.getItem("login");
