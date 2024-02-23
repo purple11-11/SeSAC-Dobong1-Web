@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 });
 
 const cookieConfig = {
-  maxAge: 1000 * 60 * 60 * 24,
+  maxAge: 1000 * 60 * 60 * 24, // 24h
   httpOnly: true,
   signed: true,
 };
