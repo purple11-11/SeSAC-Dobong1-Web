@@ -10,7 +10,7 @@
       <input type="text" id="userid" name="userid" value="<%= data.userid%>" readonly />
       <br />
       <label for="pw">Password</label>
-      <input type="password" name="pw" id="pw" value="<%= data.pw%>" required />
+      <input type="password" name="pw" id="pw" required />
       <br />
       <label for="name">Name</label>
       <input type="text" name="name" id="name" value="<%=data.name%>" required />
@@ -38,6 +38,7 @@
         })
           .then(() => {
             alert("회원정보가 수정되었습니다.");
+            form.pw.value = "";
           })
           .catch((err) => {
             alert("회원정보 수정 실패! 다시 수정해주세요.");

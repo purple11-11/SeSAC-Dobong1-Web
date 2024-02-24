@@ -1,4 +1,6 @@
 const { User } = require("../models");
+const bcrypt = require("bcrypt");
+const saltRounds = 10;
 
 /* GET */
 // /
@@ -35,13 +37,19 @@ exports.postDoubleCheck = async (req, res) => {
     res.status(500).send("server error!");
   }
 };
+
+// 회원가입 >> 해시값 생성
+function hashPw(pw) {
+  return bcrypt.hashSync(pw, saltRounds); // return >> 암호화 된 문자열
+}
+
 exports.postSignup = async (req, res) => {
   //   console.log("postSignup req.body ::", req.body);
   try {
     const { userid, pw, name } = req.body;
     const signup = await User.create({
       userid,
-      pw,
+      pw: hashPw(pw),
       name,
     }).then(() => {
       res.end();
@@ -52,6 +60,11 @@ exports.postSignup = async (req, res) => {
   }
 };
 
+// 로그인 >> 비밀번호(해시 값) 일치 확인
+function comparePW(inputPw, hashedPw) {
+  return bcrypt.compareSync(inputPw, hashedPw); // return >> true || false
+}
+
 exports.postSignin = async (req, res) => {
   try {
     const { userid, pw } = req.body;
@@ -60,9 +73,10 @@ exports.postSignin = async (req, res) => {
         userid,
         pw,
       },
-    }).then((result) => {
-      console.log("postSignin result ::", result);
-      if (result) res.send(true);
+    }).then(() => {
+      // console.log("postSignin result ::", result);
+      const isLogin = comparePW(pw, hashPw(pw));
+      if (isLogin) res.send(true);
       else res.send(false);
     });
   } catch (error) {
