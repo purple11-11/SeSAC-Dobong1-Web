@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('include/include', {title: "마이페이지"})%>
+  <body>
+    <h1>마이페이지</h1>
+    <a href="/">HOME</a>
+    <form name="form_profile">
+      <input type="hidden" id="id" value="<%=data.id%>" />
+      <label for="userid">ID</label>
+      <input type="text" id="userid" name="userid" value="<%= data.userid%>" readonly />
+      <br />
+      <label for="pw">Password</label>
+      <input type="password" name="pw" id="pw" value="<%= data.pw%>" required />
+      <br />
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" value="<%=data.name%>" required />
+      <br />
+      <button type="button" onclick="profileEdit()">회원 정보 수정</button>
+      <button type="button" onclick="profileDelete()">회원 탈퇴</button>
+    </form>
+
+    <script>
+      const form = document.forms["form_profile"];
+
+      function profileEdit() {
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+        axios({
+          method: "patch",
+          url: "/profile/edit",
+          data: {
+            id: form.id.value,
+            pw: form.pw.value,
+            name: form.name.value,
+          },
+        })
+          .then(() => {
+            alert("회원정보가 수정되었습니다.");
+          })
+          .catch((err) => {
+            alert("회원정보 수정 실패! 다시 수정해주세요.");
+          });
+      }
+      function profileDelete() {
+        axios({
+          method: "delete",
+          url: "/profile/delete",
+          data: {
+            id: form.id.value,
+          },
+        })
+          .then(() => {
+            alert("회원 탈퇴😥 회원정보가 삭제되었습니다.");
+            document.location.href = "/";
+          })
+          .catch((err) => {
+            alert("잘못된 요청입니다. 다시 시도해주세요.");
+          });
+      }
+    </script>
+  </body>
+</html>

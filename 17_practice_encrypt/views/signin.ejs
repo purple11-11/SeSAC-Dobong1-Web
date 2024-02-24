@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include('include/include', {title: "로그인"})%>
+  <body>
+    <h1>로그인</h1>
+    <form action="/profile" method="POST" name="form_info">
+      <input type="hidden" name="userid" />
+    </form>
+    <form name="form_login">
+      <label for="userid">ID</label>
+      <input type="text" name="userid" required />
+      <br />
+      <label for="pw">Password</label>
+      <input type="password" name="pw" id="pw" required />
+      <br />
+      <button type="button" onclick="login()">로그인</button>
+    </form>
+    <a href="/">HOME</a>
+    <a href="/signup">회원가입</a>
+
+    <script>
+      function login() {
+        const form = document.forms["form_login"];
+        const formInfo = document.forms["form_info"];
+
+        // 유효성 체크
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        axios({
+          method: "post",
+          url: "/signin",
+          data: {
+            userid: form.userid.value,
+            pw: form.pw.value,
+          },
+        }).then((res) => {
+          // console.log(res.data); // true || false
+          if (res.data) {
+            alert("로그인 성공!😎");
+            formInfo.userid.value = form.userid.value;
+            formInfo.submit(); // /profile로 post 요청 보내기
+          } else {
+            alert("로그인 실패!😥 아이디와 비밀번호를 확인해주세요.");
+            form.reset();
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
