@@ -19,6 +19,15 @@
   <br />
   <br />
 
+## ✨ 프로젝트
+
+| No  | 프로젝트명 및 Repository | Team Name |       Period        |
+| :-: | :----------------------: | :-------: | :-----------------: |
+| 1st |      [SeSAC Hub]()       |  1번출구  | 24.02.26 ~ 24.03.13 |
+
+<br />
+<br />
+  
 ## 📂 프론트엔드
 
 학습 기간 : 2023.12.29 ~ 2024.01.24
@@ -34,6 +43,10 @@
 |  5  |       jQuery        |      [jQuery(1)](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/03_Javascript/1.15/jQuery), [jQuery(2)](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/03_Javascript/1.17)      |                                                                                                           [jQuery](https://velog.io/@purple11_11/SeSAC-X-%EC%BD%94%EB%94%A9%EC%98%A8-%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90-%ED%92%80%EC%8A%A4%ED%83%9D-%EA%B3%BC%EC%A0%95-3%EC%A3%BC%EC%B0%A8-%ED%9A%8C%EA%B3%A0-JS-jQuery-%EB%B0%98%EC%9D%91%ED%98%95-%EB%B6%80%ED%8A%B8%EC%8A%A4%ED%8A%B8%EB%9E%A9)                                                                                                            | 24.01.15 ~ 24.01.17 |
 |  6  | 반응형 & 부트스트랩 |     [반응형](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/03_Javascript/1.17), [부트스트랩](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/03_Javascript/1.19/Bootstrap)      |                                                                                                     [반응형 & 부트스트랩](https://velog.io/@purple11_11/SeSAC-X-%EC%BD%94%EB%94%A9%EC%98%A8-%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90-%ED%92%80%EC%8A%A4%ED%83%9D-%EA%B3%BC%EC%A0%95-3%EC%A3%BC%EC%B0%A8-%ED%9A%8C%EA%B3%A0-JS-jQuery-%EB%B0%98%EC%9D%91%ED%98%95-%EB%B6%80%ED%8A%B8%EC%8A%A4%ED%8A%B8%EB%9E%A9)                                                                                                     | 24.01.17 ~ 24.01.19 |
 |  7  |   JavaScript 심화   |                                                  [JavaScript 심화](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/03_Javascript/upgradeJS)                                                  |                                                                                                                                                                                                                                                [JavaScript 심화]                                                                                                                                                                                                                                                | 24.01.22 ~ 24.01.24 |
+
+| No  |  Contents   |  Repository   |     Velog     |  Period  |
+| :-: | :---------: | :-----------: | :-----------: | :------: |
+|  1  | React start | [React start] | [React start] | 24.03.15 |
 
 ### 실습
 
