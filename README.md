@@ -44,15 +44,20 @@
 |  6  | 반응형 & 부트스트랩 |     [반응형](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/03_Javascript/1.17), [부트스트랩](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/03_Javascript/1.19/Bootstrap)      |                                                                                                     [반응형 & 부트스트랩](https://velog.io/@purple11_11/SeSAC-X-%EC%BD%94%EB%94%A9%EC%98%A8-%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9E%90-%ED%92%80%EC%8A%A4%ED%83%9D-%EA%B3%BC%EC%A0%95-3%EC%A3%BC%EC%B0%A8-%ED%9A%8C%EA%B3%A0-JS-jQuery-%EB%B0%98%EC%9D%91%ED%98%95-%EB%B6%80%ED%8A%B8%EC%8A%A4%ED%8A%B8%EB%9E%A9)                                                                                                     | 24.01.17 ~ 24.01.19 |
 |  7  |   JavaScript 심화   |                                                  [JavaScript 심화](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/03_Javascript/upgradeJS)                                                  |                                                                                                                                                                                                                                                [JavaScript 심화]                                                                                                                                                                                                                                                | 24.01.22 ~ 24.01.24 |
 
-| No  |  Contents   |  Repository   |     Velog     |  Period  |
-| :-: | :---------: | :-----------: | :-----------: | :------: |
-|  1  | React start | [React start] | [React start] | 24.03.15 |
+| No  |   Contents    |   Repository    |      Velog      |  Period  |
+| :-: | :-----------: | :-------------: | :-------------: | :------: |
+|  1  |  React start  |  [React start]  |  [React start]  | 24.03.15 |
+|  2  | state & props | [state & props] | [state & props] | 24.03.18 |
+|  3  | Event Handler | [Event Handler] | [Event Handler] | 24.03.18 |
 
-### 실습
+### React 실습
 
-| No  | Contents | Period |
-| :-: | :------: | :----: |
-|  1  |   []()   |  []()  |
+| No  |                                                                             Contents                                                                              |  Period  |
+| :-: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------: |
+|  1  |                                        [JSX 실습](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/18-react-jsx)                                        | 24.03.15 |
+|  2  |                      [ PROPS 실습](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/19-react-props-state#props-%EC%8B%A4%EC%8A%B5)                      | 24.03.18 |
+|  3  |                      [ STATE 실습](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/19-react-props-state#state-%EC%8B%A4%EC%8A%B5)                      | 24.03.18 |
+|  4  | [ 이벤트 핸들러 실습](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/20-react-event-handling#%EC%9D%B4%EB%B2%A4%ED%8A%B8-%ED%95%B8%EB%93%A4%EB%A7%81) | 24.03.18 |
 
   <br />
   <br />
