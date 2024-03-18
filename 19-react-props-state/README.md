@@ -5,6 +5,13 @@
 ![alt text](image-2.png)
 ![alt text](image-3.png)
 
+# STATE 실습
+
+![alt text](image-4.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
+![alt text](image-7.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
