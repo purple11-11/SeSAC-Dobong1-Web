@@ -7,6 +7,10 @@
 
 ![alt text](image-2.png)
 
+### 이벤트 핸들링 실습 4
+
+![alt text](image-3.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

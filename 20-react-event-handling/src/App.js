@@ -5,6 +5,7 @@ import SyntheticEvent from "./SyntheticEvent";
 import HandlerEx from "./components/ex/HandlerEx";
 import HandlerEx2 from "./components/ex/HandlerEx2";
 import HandlerEx3 from "./components/ex/HandlerEx3";
+import EntirePractice from "./components/practice/EntirePractice";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
       <h1>실습 3</h1>
       <HandlerEx3 />
       <hr />
+
+      <h1>실습 4</h1>
+      <EntirePractice />
     </div>
   );
 }
