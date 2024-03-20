@@ -1,3 +1,12 @@
+# Ref vs State vs Variable 비교
+![568e940b-2f44-42f3-bb39-9d7a0da41ac0](https://github.com/purple11-11/SeSAC-Dobong1-Web/assets/125553827/0e79772c-fc85-4076-93e8-c87dee1f19c4)
+
+- Ref : ref값은 변경되어도 re-rendering되지 않음
+- State : state 값 변경 시 re-rendering
+- Variable : 렌더링 될 때마다 초기화
+
+<br/>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
