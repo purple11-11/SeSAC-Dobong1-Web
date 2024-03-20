@@ -19,5 +19,6 @@ router.post("/profile", controller.postProfile);
 router.patch("/profile/edit", controller.patchProfile);
 
 /* DELETE */
+router.delete("/logout", controller.logout);
 router.delete("/profile/delete", controller.deleteProfile);
 module.exports = router;

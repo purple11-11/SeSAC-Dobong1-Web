@@ -38,12 +38,12 @@
           },
         }).then((res) => {
           // console.log(res.data); // true || false
-          if (res.data) {
+          if (res.data.success) {
             alert("로그인 성공!😎");
             formInfo.userid.value = form.userid.value;
             formInfo.submit(); // /profile로 post 요청 보내기
           } else {
-            alert("로그인 실패!😥 아이디와 비밀번호를 확인해주세요.");
+            alert(res.data.message);
             form.reset();
           }
         });
