@@ -30,11 +30,10 @@
   
 ## 📂 프론트엔드
 
-학습 기간 : 2023.12.29 ~ 2024.01.24
-
 ### 학습 기록
 
-> HTML, CSS, JavaScript
+> HTML, CSS, JavaScript <br />
+> 학습 기간 : 2023.12.29 ~ 2024.01.24
 
 | No  |                                                                                               Repository                                                                                                |                                                                                                                                                                                                                                                      Velog                                                                                                                                                                                                                                                      |       Period        |
 | :-: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------: |
@@ -49,24 +48,28 @@
 <br/>
 <br/>
 
-> React.js
+> React.js <br/>
+> 학습 기간 : 2024.03.15 ~
 
-| No  |                                             Repository                                              |       Velog       |   Period   |
-| :-: | :-------------------------------------------------------------------------------------------------: | :---------------: | :--------: |
-|  1  |       [React start](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/18-react-jsx)        |   [React start]   |  24.03.15  |
-|  2  |  [state & props](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/19-react-props-state)   |  [state & props]  |  24.03.18  |
-|  3  | [Event Handler](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/20-react-event-handling) |  [Event Handler]  |  24.03.18  |
-|  4  |      [Map & Filter](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/21-map-filter)       |  [Map & Filter]   |  24.03.20  |
-|  5  |   [Ref & LifeCycle](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/22-ref-lifecycle)    | [Ref & LifeCycle] | 24.03.20 ~ |
+| No  |                                             Repository                                              |       Velog       |       Period        |
+| :-: | :-------------------------------------------------------------------------------------------------: | :---------------: | :-----------------: |
+|  1  |       [React start](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/18-react-jsx)        |   [React start]   |      24.03.15       |
+|  2  |  [state & props](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/19-react-props-state)   |  [state & props]  |      24.03.18       |
+|  3  | [Event Handler](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/20-react-event-handling) |  [Event Handler]  |      24.03.18       |
+|  4  |      [Map & Filter](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/21-map-filter)       |  [Map & Filter]   |      24.03.20       |
+|  5  |   [Ref & LifeCycle](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/22-ref-lifecycle)    | [Ref & LifeCycle] | 24.03.20 ~ 24.03.22 |
+|  6  |      [React Style](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/23-react-style)       |   [React Style]   | 24.03.22 ~ 24.03.25 |
+|  7  |         [Hooks](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/24-react-hooks)          |      [Hooks]      |      24.03.25       |
 
   <br />
   <br />
 
 ## 📂 백엔드
 
-학습 기간 : 2024.01.24 ~
-
 ### 학습 기록
+
+> Node.js <br/>
+> 학습 기간 : 2024.01.24 ~ 2024.02.23
 
 | No  |                                                                           Repository                                                                            |                                                                                                                                                       Velog                                                                                                                                                       |       Period        |
 | :-: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------: |
