@@ -1,0 +1,11 @@
+$color-pink: pink;
+$color-yellow: yellow;
+$color-green: green;
+
+@mixin circle($circleColor, $rotateDeg) {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: $circleColor;
+  transform: rotate($rotateDeg);
+}

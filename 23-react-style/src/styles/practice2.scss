@@ -1,0 +1,10 @@
+@import "practiceUtil";
+
+.practiceContainer {
+  display: flex;
+  flex-direction: row;
+
+  @include circle($color-pink, 10deg);
+  @include circle($color-yellow, 20deg);
+  @include circle($color-green, 30deg);
+}
