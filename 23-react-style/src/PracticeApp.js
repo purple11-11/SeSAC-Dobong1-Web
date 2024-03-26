@@ -1,5 +1,6 @@
 import Practice1 from "./components/Practice1";
 import Practice2 from "./components/Practice2";
+import PracticeLifeCycle from "./components/PracticeLifeCycle";
 
 export default function PracticeApp() {
   return (
@@ -10,6 +11,9 @@ export default function PracticeApp() {
 
       <h2>SCSS 실습 2번</h2>
       <Practice2 />
+
+      <h2>SCSS 실습 3번</h2>
+      <PracticeLifeCycle />
     </div>
   );
 }
