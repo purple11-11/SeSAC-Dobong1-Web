@@ -5,6 +5,8 @@ import UseCallback2 from "./components/UseCallback2";
 import UseReducer from "./components/UseReducer";
 import useTitle from "./hooks/useTitle";
 import CustomHook from "./components/CustomHook";
+import Form from "./components/Form";
+import PracticeForm from "./components/PracticeForm";
 
 function App() {
   useTitle("React Hooks!");
@@ -22,6 +24,10 @@ function App() {
       <UseReducer />
 
       <CustomHook />
+
+      <Form />
+
+      <PracticeForm />
     </div>
   );
 }
