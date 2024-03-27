@@ -1,3 +1,11 @@
+# 실습 (react-router-dom과 styled components를 이용해 아래 화면 구현하기)
+
+제한 사항 : 페이지는 3개만 만들기
+
+![c333eb91-0e79-4975-9def-0edd312393d0](https://github.com/purple11-11/SeSAC-Dobong1-Web/assets/125553827/b2c1ec65-3525-4e5c-bb17-99dba75be79d)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
