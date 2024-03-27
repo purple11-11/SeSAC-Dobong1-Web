@@ -59,7 +59,8 @@
 |  4  |      [Map & Filter](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/21-map-filter)       |  [Map & Filter]   |      24.03.20       |
 |  5  |   [Ref & LifeCycle](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/22-ref-lifecycle)    | [Ref & LifeCycle] | 24.03.20 ~ 24.03.22 |
 |  6  |      [React Style](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/23-react-style)       |   [React Style]   | 24.03.22 ~ 24.03.25 |
-|  7  |         [Hooks](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/24-react-hooks)          |      [Hooks]      |      24.03.25       |
+|  7  |         [Hooks](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/24-react-hooks)          |      [Hooks]      | 24.03.25 ~ 24.03.27 |
+|  8  |        [Router](https://github.com/purple11-11/SeSAC-Dobong1-Web/tree/main/25-react-router)         |     [Router]      |      24.03.27       |
 
   <br />
   <br />
